@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mantis Athletics – Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    input[type="email"],
+    input[type="tel"] {
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #1abc9c;
+      color: white;
+      padding: 14px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #16a085;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.8em;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mantis Athletics</h1>
+  <h2>Coming Soon – Get 10% Off the Next Drop</h2>
+
+  <form onsubmit="handleSubmit(event)">
+    <input type="email" id="email" name="email" placeholder="Your Email" required />
+    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
+    <button type="submit">Join Waitlist</button>
+  </form>
+
+  <footer>&copy; 2025 Mantis Athletics. All rights reserved.</footer>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+
+      alert(`Thanks for joining the waitlist!\nEmail: ${email}\nPhone: ${phone}`);
+
+      // In a real version, you would send the data to a backend or Google Sheet
+      event.target.reset();
+    }
+  </script>
+
+</body>
+</html>
